@@ -1,0 +1,3 @@
+{
+  "buildCommand": "echo \"Marche DZ is a stateful Node.js server and cannot run on Vercel. Use the Dockerfile (Railway / Render / Fly.io / VPS). See DEPLOY.md\" && exit 1"
+}

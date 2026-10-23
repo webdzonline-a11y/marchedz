@@ -1,0 +1,22 @@
+# Render Blueprint — persistent disk requires a paid instance (Starter or higher)
+services:
+  - type: web
+    name: marche-dz
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/bootstrap
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /data
+      - key: UPLOADS_DIR
+        value: /data/uploads
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
